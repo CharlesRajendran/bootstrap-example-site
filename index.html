@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="./main.css" />
-
-    <title>Moon Fruit (http://www.moonfruit.com/)</title>
+    <link rel="favicon icon" href="./img/logo.png" />
+    <title>Moon Fruit</title>
   </head>
   <body>
     <section id="header">
@@ -53,9 +53,71 @@
       <div id="header-text">
           <h1>The quickest, easiest way to build a beautiful website.</h1>
           <p>Start your 14-day free trial with Moonfruit</p>
-          <a class="btn btn-custom" id="startBtn">start now</a>
+          <a class="btn btn-custom" id="startBtn" data-toggle="modal" data-target="#signupModal">start now</a>
       </div>
     </section>
+
+  <!-- Modal -->
+  <div class="modal" id="signupModal" role="dialog">
+    <div class="modal-dialog modal-dialog-scrollable">
+
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <div class="modal-title"> 
+            <p>Let’s sign you up, then... </p>
+            <p>Already have a Moonfruit account? <a href="#" class="btn btn-link">Log in </a> </p>
+          
+            <div id="model-oauth-buttons">
+              <a href="#" class="btn btn-primary start-now"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="btn btn-danger start-now"><i class="fab fa-google-plus-g"></i></a>
+            </div>
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <p>or sign up using email</p>
+          <form>
+            
+            <div class="form-group">
+              <label>username</label>
+              <input class="form-control" />
+            </div>
+            
+            <div class="form-group">
+              <label>email</label>
+              <input class="form-control" type="email" />
+            </div>
+            
+            <div class="form-group">
+              <label>password</label>
+              <div class="input-group">
+                <input class="form-control" type="password" id="btn-password" />
+                <div class="input-group-append">
+                  <i class="fas fa-lock"></i>
+                </div>
+              </div>
+            </div>
+
+            <div id="remember-me" class="input-group">
+              <input type="checkbox"/>
+              <label>&emsp;Remember Me</label>
+            </div>
+          </form>
+        </div>
+        
+        <div id="signupButton">
+          <button type="button" class="btn btn-outline-success start-now">sign me up</button>
+        </div>
+
+        <p id="agreement">By signing up you agree to accept and adhere to our terms and conditions and privacy policy.</p>
+      </div>
+
+    </div>
+  </div>
 
     <section id="customer-section">
       <div class="container">

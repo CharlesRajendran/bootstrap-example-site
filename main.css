@@ -72,6 +72,10 @@ a:hover {
     animation-fill-mode: forwards;
 }
 
+#rightNavbarNav {
+    padding-right: 2rem;
+}
+
 .btn-custom {
     background: #eaeae9;
     color: black !important;
@@ -259,6 +263,77 @@ a:hover {
     padding-right: 0rem;
 }
 
+/* Modal */
+#signupModal {
+    color: black;
+    font-family: var(--thin-font);
+}
+
+#signupModal .modal-title p {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+#signupModal .modal-title p:first-child {
+    font-size: 2rem;
+}
+
+#signupModal .modal-title p a {
+    color: #17ceaf;
+    font-size: 1rem;
+    padding: 0;
+    font-weight: bold;
+}
+
+#model-oauth-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+#model-oauth-buttons a {
+    color: #fff;
+    width: 100%;
+}
+
+.modal-body input.form-control {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline-color: transparent !important;
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+    border-radius: 0;
+}
+
+.form-control:focus {
+    border-color: cyan;
+    border-width: 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.input-group-append i {
+    color: #777e89;
+    font-size: 2rem;
+    padding: 0px 10px;
+}
+
+#remember-me input[type="checkbox"]{
+    width: 25px;
+    height: 25px;
+}
+
+#signupButton {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2rem;
+}
+
+#agreement {
+    text-align: center;
+}
 
 /* Animations */
 @keyframes headerAnimation {

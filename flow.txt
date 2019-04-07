@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./main.css" />
+    <link rel="favicon icon" href="./img/logo.png" />
 
-    <title>Moon Fruit (http://www.moonfruit.com/)</title>
+    <title>Moon Fruit</title>
   </head>
   <body>
 
@@ -217,7 +218,7 @@ Header Animations
 
 =============================================================================================================================
     .....
-    <div class="float-right" id="navbarNav"> (float-right)
+    <div class="float-right" id="rightNavbarNav"> (float-right)
         <ul class="navbar-nav">
             <li class="nav-item">
             <a class="btn btn-custom">Signup</a>
@@ -233,6 +234,9 @@ Header Animations
 </nav>
 
 -------------------------------------------------------------------
+#rightNavbarNav {
+    padding-right: 2rem;
+}
 
 .btn-custom {
     background: #eaeae9;
@@ -675,5 +679,163 @@ add the `left-translate-animation` to mobile responsive 2nd content
 #contact-footer a:last-child {
     padding-right: 0rem;
 }
+==========================================================================================================================
+  <!-- Modal -->
+  <div class="modal" id="signupModal" role="dialog">
+    <div class="modal-dialog modal-dialog-scrollable">
+
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <div class="modal-title"> 
+            <p>Let’s sign you up, then... </p>
+            <p>Already have a Moonfruit account? <a href="#" class="btn btn-link">Log in </a> </p>
+
+            <div id="model-oauth-buttons">
+              <a href="#" class="btn btn-primary start-now"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="btn btn-danger start-now"><i class="fab fa-google-plus-g"></i></a>
+            </div>
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          ...
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+----------------------------------------------------------------------------
+/* Modal */
+#signupModal {
+    color: black;
+}
+
+#signupModal .modal-title p {
+    margin: 0;
+    padding: 0;
+    font-family: var(--thin-font);
+    font-size: 1rem;
+}
+
+#signupModal .modal-title p:first-child {
+    font-size: 2rem;
+}
+
+#signupModal .modal-title p a {
+    color: #17ceaf;
+    font-size: 1rem;
+    padding: 0;
+    font-weight: bold;
+}
+
+#model-oauth-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+#model-oauth-buttons a {
+    color: #fff;
+    width: 100%;
+}
+
+--------------------------------------------------------------------------------
+======================================================================================================================
+<div class="modal-body">
+    <p>or sign up using email</p>
+    <form>
+    <div class="form-group">
+        <label>username</label>
+        <input class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>email</label>
+        <input class="form-control" type="email" />
+    </div>
+    <div class="form-group">
+        <label>password</label>
+        <input class="form-control" type="password" />
+    </div>
+    </form>
+</div>
+---------------------------------------------------------------------
+
+.modal-body input.form-control {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline-color: transparent !important;
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+    border-radius: 0;
+}
+
+.form-control:focus {
+    border-color: cyan;
+    border-width: 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.input-group-append i {
+    color: #777e89;
+    font-size: 2rem;
+    padding: 0px 10px;
+}
+
+-----------------------------------------------------------------
+
+    <div id="remember-me" class="input-group">
+        <input type="checkbox"/>
+        <label>&emsp;Remember Me</label>
+    </div>
+</form>
+
+<div id="signupButton">
+    <button type="button" class="btn btn-outline-success start-now">sign me up</button>
+</div>
+
+<p id="agreement">By signing up you agree to accept and adhere to our terms and conditions and privacy policy.</p>
+
+------------------------------------------------------------------------
+
+#remember-me input[type="checkbox"]{
+    width: 25px;
+    height: 25px;
+}
+
+#signupButton {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2rem;
+}
+
+#agreement {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
