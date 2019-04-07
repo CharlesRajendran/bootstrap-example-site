@@ -345,15 +345,190 @@ Add the animations to
 
 ============================================================================================================================
 
+<section id="content-section">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            ...
+        </div>
+
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            ...
+        </div> 
+    </div>
+</section>
+
+==============================================================================================================================
+
+<section id="content-section">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+
+
+
+
+            <div class="content-text">
+                <h4>
+                    Create a beautiful responsive website in a matter of minutes.
+                </h4>
+                <p>
+                    Mix and match our ready made template blocks to create a unique website that truly suits you. It's easy - no tech skills needed. Our friendly support team are always a click away.
+                </p>
+                <button type="button" class="btn btn-outline-dark start-now">start now</button>
+            </div>
 
 
 
 
 
+        </div>
+
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <img src="./img/content-1.png" class="img-fluid" />
+        </div> 
+    </div>
+</section>
 
 
+--------------------------------------------------------------------------------------------------------------------
+
+.content-text {
+    padding-left: 30%;
+    padding-right: 15%;
+}
+
+:root {
+    --thick-font: "Proxima Soft Cond Med";
+    --thin-font: "Proxima Soft Lt";
+}
+
+.content-text h4 {
+    font-family: var(--thin-font);
+	font-weight: 500;
+    font-style: Normal;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: #333;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.content-text p {
+    font-family: var(--thin-font);
+	font-weight: 100;
+    font-style: normal;
+    color: #777e89;
+    font-size: 1.2rem;
+    line-height: 36px;
+    margin-bottom: 3rem;
+    padding-right: 20%;
+}
+
+.start-now {
+    padding: 0.5rem 2rem;
+}
+
+===========================================================================================================================
+Do the same for other columns aswell and also do the below
+-----------------------------------------
+#content-section > .row {
+    margin-bottom: 10rem;
+}
+
+#content-section > .row:last-child {
+    margin-bottom: 1rem;
+}
 
 
+============================================================================================================================
+-- for the second content section
+
+-- big screen
+.big-screen {
+    display: inline-block;
+}
+
+.small-screen {
+    display: none;
+}
+
+-- mobile responsiveness 
+.big-screen {
+    display: none;
+}
+
+.small-screen {
+    display: block;
+}
+
+----------------------------------------------------------------------
+
+reduce the bottom space between content sections in mobile
+#content-section > .row {
+    margin-bottom: 2rem;
+}
+
+=============================================================================================================================
+-- adding animation to the content image
+-- add the relevent ids
+
+#firstContentImage, #secondContentImage, #thirdContentImage {
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+------------------------------------------
+@keyframes contentRightImage {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes contentLeftImage {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+----------------------------------------------
+.right-translate-animation {
+    animation: 1s ease-in contentRightImage;
+}
+
+.left-translate-animation {
+    animation: 1s ease-in contentLeftImage;
+}
+
+---------------------------------------------------------------
+-- little bit of javascript in main.js file
+
+const $customerSection = document.getElementById('customer-section').getBoundingClientRect();
+const $firstContentSection = document.getElementById('firstContent').getBoundingClientRect(); // row level
+const $secondContentSection = document.getElementById('secondContent').getBoundingClientRect();
+const $thirdContentSection = document.getElementById('thirdContent').getBoundingClientRect();
+
+window.addEventListener('scroll', function(e) {
+    // console.log(pageYOffset, $firstContentSection, $secondContentSection, $thirdContentSection);
+    if(pageYOffset > $customerSection.y) {
+        document.getElementById('firstContentImage').classList.add('right-translate-animation');
+    }
+    if(pageYOffset > $firstContentSection.y) {
+        document.getElementById('secondContentImage').classList.add('left-translate-animation');
+    }
+    if(pageYOffset > $secondContentSection.y) {
+        document.getElementById('thirdContentImage').classList.add('right-translate-animation');
+    }
+})
+
+============================================================================================================================
+add the left-translate-animation to mobile responsive 2nd content
 
 
 

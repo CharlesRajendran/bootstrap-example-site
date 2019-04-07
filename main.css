@@ -15,6 +15,8 @@ body {
 
 :root {
     --menu-hover-color: lightgray;
+    --thick-font: "Proxima Soft Cond Med";
+    --thin-font: "Proxima Soft Lt";
 }
 
 #header {
@@ -48,7 +50,7 @@ a:hover {
     color: #fff;
     text-align: center;
         
-    font-family: "Proxima Soft Cond Med";
+    font-family: var(--thick-font);
     font-style: Normal;
     font-weight: normal;
     letter-spacing: 1px;
@@ -117,6 +119,71 @@ a:hover {
     grid-gap: 3rem;
 }
 
+/* Content Section */
+#content-section {
+    padding-top: 8%; 
+    padding-bottom: 8%;
+}
+
+.content-text {
+    padding-left: 30%;
+    padding-right: 15%;
+}
+
+.content-text h4 {
+    font-family: var(--thin-font);
+	font-weight: 500;
+    font-style: Normal;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: #333;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.content-text p {
+    font-family: var(--thin-font);
+	font-weight: 100;
+    font-style: normal;
+    color: #777e89;
+    font-size: 1.2rem;
+    line-height: 36px;
+    margin-bottom: 3rem;
+    padding-right: 20%;
+}
+
+.start-now {
+    padding: 0.5rem 2rem;
+}
+
+#content-section > .row {
+    margin-bottom: 10rem;
+}
+
+#content-section > .row:last-child {
+    margin-bottom: 1rem;
+}
+
+.big-screen {
+    display: inline-block;
+}
+
+.small-screen {
+    display: none;
+}
+
+.right-translate-animation {
+    animation: 1s ease-in contentRightImage;
+}
+
+.left-translate-animation {
+    animation: 1s ease-in contentLeftImage;
+}
+
+#firstContentImage, #secondContentImage, #thirdContentImage {
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
 
 /* Animations */
 @keyframes headerAnimation {
@@ -131,6 +198,28 @@ a:hover {
 
     100% {
         visibility: visible;
+    }
+}
+
+@keyframes contentRightImage {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes contentLeftImage {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
@@ -179,6 +268,25 @@ a:hover {
         grid-template-columns: repeat(3, 1fr);
         justify-content: center;
         align-items: center;
+    }
+
+    
+    .content-text {
+        padding-left: 5%;
+        padding-bottom: 5%;
+        margin-bottom: 5%;
+    }
+
+    .big-screen {
+        display: none;
+    }
+    
+    .small-screen {
+        display: block;
+    }
+
+    #content-section > .row {
+        margin-bottom: 2rem;
     }
 }
 
