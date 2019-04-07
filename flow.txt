@@ -287,6 +287,72 @@ Add the animations to
     visibility: hidden;
     animation-fill-mode: forwards;
 }
+========================================================================================================================
+-- for mobile responsiveness
+#rightNavbarNav {
+    display: none;
+}
+
+=========================================================================================================================
+=========================================================================================================================
+-- section 2
+<section id="customer-section">
+    <div class="container">
+    
+    </div>
+</section>
+
+=========================================================================================================================
+<section id="customer-section">
+    <div class="container">
+        <img src="./img/telegraph.svg" />
+        <img src="./img/huffington.svg" />
+        <img src="./img/mashable.svg" />
+        <img src="./img/gurdian.svg" />
+        <img src="./img/forbes.svg" />
+        <img src="./img/producthunt.svg" />
+        <img src="./img/techcrunch.svg" />
+        <img src="./img/yell.svg" />
+    </div>
+</section>
+
+-------------------------------------------------------------------------------
+
+/* Customer Sections */
+#customer-section {
+    background: #f5f5f5;
+    padding: 5rem;
+}
+
+#customer-section > .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+}
+--------------------------------------------------------------------------------
+/* Customer Sections */ -- In the mobile screen
+#customer-section {
+    background: #f5f5f5;
+    padding: 1rem;
+}
+
+#customer-section > .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+============================================================================================================================
+
+
+
+
+
+
+
+
+
 
 
 
