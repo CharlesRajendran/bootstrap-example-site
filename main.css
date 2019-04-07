@@ -1,0 +1,157 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+@import '//cloud.typenetwork.com/projects/3098/fontface.css/';
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: proxima-soft, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
+:root {
+    --menu-hover-color: lightgray;
+}
+
+#header {
+    width: 100vw;
+    height: 100vh;
+    background: url('./img/hero.jpg') no-repeat fixed center center / cover;
+    position: relative;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+    font-weight: 550;
+    padding: 1rem 1.5rem;
+    animation: 0.7s ease-in headerAnimation;
+}
+
+i.fas, i.fa {
+    color: white;
+    font-size: 2rem;
+}
+
+a:hover {
+    color: lightgray !important;
+}
+
+#header-text {
+    position: absolute;
+    top: calc(50% - 5rem);
+    left: 30%;
+    width: 40%;
+    color: #fff;
+    text-align: center;
+        
+    font-family: "Proxima Soft Cond Med";
+    font-style: Normal;
+    font-weight: normal;
+    letter-spacing: 1px;
+    /* font-family: 'Roboto', sans-serif; */
+}
+
+#header-text h1 {
+    font-size: 48px;
+    line-height: 53px;
+    animation: 1s ease-in headerAnimation;
+}
+
+#header-text p {
+    margin-top: 2em;
+    font-size: 1.4em;
+    animation: 1s ease-in headerAnimation;
+    animation-delay: 1.1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+.btn-custom {
+    background: #eaeae9;
+    color: black !important;
+    margin: 0.9em;
+    animation: 1s ease-in headerAnimation;
+}
+
+.btn-custom:hover {
+    color: black !important;
+    opacity: 0.9;
+}
+
+#side-nav-bars {
+    display: inline-block;
+    margin-top: 0.6em;
+    animation: 1s ease-in headerAnimation;
+}
+
+#side-nav-bars:hover {
+    background: var(--menu-hover-color);
+    border-radius: 25%; 
+}
+
+.navbar-brand {
+    animation: 1s ease-in headerAnimation;
+}
+
+#startBtn.btn.btn-custom {
+    font-size: 1.5em;
+    padding: 0.5rem 2rem;
+    animation-delay: 2.1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+/* Animations */
+@keyframes headerAnimation {
+    0% {
+        opacity: 0%;
+        transform: translateY(-30px);
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    100% {
+        visibility: visible;
+    }
+}
+
+
+/* Media Queries */
+@media(min-width: 500px) {
+    .navbar-brand {
+        padding: 0rem 2rem;
+    }
+
+    .firstnav {
+        padding-left: 0rem !important;
+    }
+}
+
+@media(max-width: 500px) {
+    .navbar-light .navbar-nav .nav-link {
+        text-align: right;
+    }
+
+    #header-text {
+        width: 100%;
+        left: 0%;
+    }
+
+    #header-text h1 {
+        font-size: 2rem;
+    }
+
+    #header-text p {
+        font-size: 1em;
+    }
+}
+
+
+
+
